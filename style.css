@@ -1,0 +1,52 @@
+.container{
+	margin: 0 auto;
+	width: 400px;
+	display: grid;
+	padding: 10px;
+	background-color: #9c9998;
+	grid-template-rows: 40px auto;
+	grid-template-columns: 100%;
+	grid-template-areas: "pnl pnl"
+						 "keys keys"
+}
+
+ul{
+	list-style: none;
+}
+
+.panel{
+	width: 100%;
+	font-size: 1.8em;
+	grid-area: pnl;
+	background-color: #d4cdcb;
+	text-align: right;
+}
+.keys{
+	grid-area: keys;
+
+}
+.keylist{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: flex-start;
+
+}
+.keylist >li{
+	margin: 1em;
+	padding: 0.4em;
+	height: auto;
+	background: yellow;
+	flex-basis: 8%;
+	text-align: center;
+	box-shadow: 5px 5px #888888;
+
+
+	}
+.keylist >li:hover{
+	background-color:  #d4cdcb;
+	box-shadow: 5px 5px #cfcb8f;
+}
+
