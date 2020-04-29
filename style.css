@@ -4,10 +4,14 @@
 	display: grid;
 	padding: 10px;
 	background-color: #9c9998;
-	grid-template-rows: 40px auto;
+	grid-template-rows: 40px 20px auto;
 	grid-template-columns: 100%;
 	grid-template-areas: "pnl pnl"
+						 "pre pre"
 						 "keys keys"
+}
+html{
+	background-color: #383a3d;
 }
 
 ul{
@@ -20,6 +24,16 @@ ul{
 	grid-area: pnl;
 	background-color: #d4cdcb;
 	text-align: right;
+	height: 50px;
+
+}
+.preres{
+	text-align: right;
+	color: #383a3d;
+	grid-area: pre;
+	background-color: #f2f4f7;
+	width: 100%;
+	font-size: 1em;
 }
 .keys{
 	grid-area: keys;

@@ -15,87 +15,36 @@ let add = document.querySelector('.add');
 let mul = document.querySelector('.mul');
 let sub = document.querySelector('.sub');
 let equ = document.querySelector('.equal');
+let preres = document.querySelector('.preres');
+let regex = /\d+[+\-*\/]\d/
 
-
-
-
-num1.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num2.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-num3.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num4.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num5.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num6.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num7.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num8.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num9.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-num0.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-add.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-divide.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-sub.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-mul.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
-dec.addEventListener('click', function(e){
-	panel.innerHTML += this.innerHTML;
-})
-
-
+num1.addEventListener('click', append)
+num2.addEventListener('click', append)
+num3.addEventListener('click', append)
+num4.addEventListener('click', append)
+num5.addEventListener('click', append)
+num6.addEventListener('click', append)
+num7.addEventListener('click', append)
+num8.addEventListener('click', append)
+num9.addEventListener('click', append)
+num0.addEventListener('click', append)
+add.addEventListener('click', append)
+divide.addEventListener('click', append)
+sub.addEventListener('click', append)
+mul.addEventListener('click', append)
+dec.addEventListener('click', append)
 equ.addEventListener('click', function(e){
 	let string = panel.innerHTML
-	panel.innerHTML = ""
 	panel.innerHTML = eval(string);
 
 })
+
+function append(){
+	var char = this.innerHTML;
+	panel.innerHTML += char;
+	if(regex.test(panel.innerHTML)){
+		preres.innerHTML = eval(panel.innerHTML)
+	}
+}
+
+
