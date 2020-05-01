@@ -1,4 +1,4 @@
-let panel = document.querySelector('.panel');
+/*let panel = document.querySelector('.panel');
 let num1  = document.querySelector('.num1');
 let num7 = document.querySelector('.num7');
 let num2 = document.querySelector('.num2');
@@ -45,6 +45,26 @@ function append(){
 	if(regex.test(panel.innerHTML)){
 		preres.innerHTML = eval(panel.innerHTML)
 	}
-}
+}*/
 
+
+$(document).ready(function(){
+
+	let regex = /\d+[+\-*\/]\d/
+
+	$('.keylist li').on('click', function(){
+		let char = $(this).html();
+		let panel = $('.panel').html();
+		if(char === '='){
+			$('.panel').html(eval(panel))
+		} else {
+			$('.panel').html(panel + char);
+			panel =$('.panel').html();
+			if (regex.test(panel)){
+				$('.preres').html(eval(panel))
+			}
+
+		}
+	})
+})
 
